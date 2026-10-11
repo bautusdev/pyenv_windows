@@ -1,0 +1,55 @@
+Instalar pyenv en windows desde powershell
+
+
+Copia, pega el siguiente comando y presiona Enter:powershell
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+git clone https://github.com/pyenv-win/pyenv-win.git "$HOME\.pyenv"
+
+Configurar las Variables de Entorno
+
+Presiona la tecla Windows, escribe Variables de entorno y selecciona Editar las variables de entorno del sistema.
+
+En la sección Variables del sistema, busca la variable llamada Path y haz clic en Editar.
+C:\Users\TU_USUARIO\.pyenv\pyenv-win\bin
+
+pyenv --version
+
+pyenv install 3.12.0
+
+#a veces no funciona asi que hay que configura vairble de entorno
+pyenv global 3.12.0
+
+Configurar en  variables de entorno
+C:\Users\TU_USUARIO\.pyenv\pyenv-win\versions\3.12.0\
+
+
+Creamos una carpeta en Desktop mkdir PYTHON
+
+python -m venv .env
+
+activar el environment
+
+powershell
+.env\Scripts\Activate.ps1
+cmd
+.env\Scripts\activate.bat
+gitbash
+source .env/Scripts/activate
+
+resultado
+(.env) C:\Users\TU_USUARIO\Desktop\PYTHON>
+
+Desactivar
+deactivate
+
+Instalar
+pip install auto-py-to-exe
+
+Desinslarar una versions
+pyenv uninstall 3.12.0
+pyenv uninstall -f 3.12.0
+
+
